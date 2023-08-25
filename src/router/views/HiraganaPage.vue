@@ -8,7 +8,7 @@
             <!-- section -->
 
             
-            <div class="w-full h-full flex items-center justify-center flex-col flex-wrap gap-10">
+            <div class="w-full h-full flex items-center justify-center flex-col flex-wrap gap-10 pb-16">
                 <!-- hiragana table -->
                 <HiraganaTable :checkSelected="checkSelected" :selectLetter="selectLetter" :selectAll="selectAll" :selectClear="selectClear" :isOpen="isOpen" ></HiraganaTable>
 
