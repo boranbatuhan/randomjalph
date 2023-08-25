@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <div class="contain overflow-y-auto bg-[#0C0A08]">
+        <div class="contain  bg-[#0C0A08]">
             <!-- header -->
             <div class="item group">
                 <p @click="goHome" class="group-hover:scale-105 transition-all cursor-pointer">hiragana</p>
@@ -12,8 +12,11 @@
                 <!-- hiragana table -->
                 <HiraganaTable :checkSelected="checkSelected" :selectLetter="selectLetter" :selectAll="selectAll" :selectClear="selectClear" :isOpen="isOpen" ></HiraganaTable>
 
+                <button v-if="!isSet" @click="setLetters" :class="{'pointer-events-none':selected.length<=0}" class="border px-3 py-1.5  flex items-center justify-center neou bg-[#390097] hover:bg-[#7017ff] transition-all hover:-mt-2  ">
+                        <p class="text-2xl text-white font-bold ">set {{ selected.length }} letters</p>
+                </button>
                 <!-- shuffleresult -->
-                <div v-if="!selected.length<=0" class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col py-8 bg-[#390097]">
+                <div v-if="isSet" class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col py-8 bg-[#390097]">
                     <div id="resultContainer" class="border w-40 h-24  flex items-center justify-center neou bg-[#390097] ">
                         <p class="text-4xl text-white font-bold ">{{ result }}</p>
                     </div>
@@ -27,22 +30,31 @@
 
 <script setup>
 import router from '/src/router';
-import {computed, ref } from 'vue';
+import { ref } from 'vue';
 
 import HiraganaTable from '/src/components/HiraganaTable.vue';
 const selected = ref([])
 const result = ref("")
+const isSet = ref(false)
 const isOpen = ref(true)
 const goHome=()=>{
     router.push("/")
 }
 
+const setLetters=()=>{
+    isOpen.value=false
+    isSet.value=true
+}
+
 const selectLetter=name=>{
     if(checkSelected(name)){
         selected.value =  selected.value.filter(i => i != name)
-    }
-    else{
-        selected.value.push(name)
+    isSet.value=false
+    
+}
+else{
+    selected.value.push(name)
+    isSet.value=false
     }
 }
 
@@ -51,7 +63,6 @@ return selected.value.includes(name)
 }
 
 const shuffleLetter = ()=>{
-    isOpen.value=false
     const container = document.querySelector("#resultContainer")
     const shuffleBtn = document.querySelector("#shuffleBtn")
     container.classList.add("flip-horizontal-bottom")

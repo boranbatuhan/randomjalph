@@ -1,6 +1,6 @@
 <template>
     <div> 
-        <details class="border select-none transition-all overflow-auto" :open="isOpen" >
+        <details :open="isOpen" class="border w-[720px] select-none transition-all overflow-hidden" >
                     <summary class=" py-2 font-bold tracking-widest text-2xl w-auto px-10 text-center bg-[#390097] text-[#00F171]">Select letters | Hiragana Alphabet</summary>
                     <table class="text-2xl">
                         <thead class="bg-zinc-300">
@@ -141,7 +141,7 @@ th{
     w-16 h-16
     px-3 py-1
     even:bg-pink-300/20  odd:bg-pink-700/20  
-    cursor-default
+    cursor-pointer
     hover:!bg-[#390097]/50 hover:!text-[#00F171]
     
 }
