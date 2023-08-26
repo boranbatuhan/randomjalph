@@ -25,74 +25,74 @@
                         </tr>
                     </thead>
                     <tbody  class="bg-blue-300">
-                        <!-- AAAAAAA  -->
+                        <!-- aaa  -->
                         <tr>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wa')}"  @click="selectLetter('wa')"><p class="text-4xl group-hover:font-bold">わ</p> <p class="text-sm select-none">wa</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ra')}"  @click="selectLetter('ra')"><p class="text-4xl group-hover:font-bold">ら</p> <p class="text-sm select-none">ra</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ya')}"  @click="selectLetter('ya')"><p class="text-4xl group-hover:font-bold">や</p> <p class="text-sm select-none">ya</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ma')}"  @click="selectLetter('ma')"><p class="text-4xl group-hover:font-bold">ま</p> <p class="text-sm select-none">ma</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ha')}"  @click="selectLetter('ha')"><p class="text-4xl group-hover:font-bold">は</p> <p class="text-sm select-none">ha</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('na')}"  @click="selectLetter('na')"><p class="text-4xl group-hover:font-bold">な</p> <p class="text-sm select-none">na</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ta')}"  @click="selectLetter('ta')"><p class="text-4xl group-hover:font-bold">た</p> <p class="text-sm select-none">ta</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('sa')}"  @click="selectLetter('sa')"><p class="text-4xl group-hover:font-bold">さ</p> <p class="text-sm select-none">sa</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ka')}"  @click="selectLetter('ka')"><p class="text-4xl group-hover:font-bold">か</p> <p class="text-sm select-none">ka</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('a')}"  @click="selectLetter('a')"><p class="text-4xl group-hover:font-bold">あ</p> <p class="text-sm select-none">a</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wa')}"  @click="selectLetter('wa', 'わ')"><p class="text-4xl group-hover:font-bold">わ</p> <p class="text-sm select-none">wa</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ra')}"  @click="selectLetter('ra', 'ら')"><p class="text-4xl group-hover:font-bold">ら</p> <p class="text-sm select-none">ra</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ya')}"  @click="selectLetter('ya', 'や')"><p class="text-4xl group-hover:font-bold">や</p> <p class="text-sm select-none">ya</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ma')}"  @click="selectLetter('ma', 'ま')"><p class="text-4xl group-hover:font-bold">ま</p> <p class="text-sm select-none">ma</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ha')}"  @click="selectLetter('ha', 'は')"><p class="text-4xl group-hover:font-bold">は</p> <p class="text-sm select-none">ha</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('na')}"  @click="selectLetter('na', 'な')"><p class="text-4xl group-hover:font-bold">な</p> <p class="text-sm select-none">na</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ta')}"  @click="selectLetter('ta', 'た')"><p class="text-4xl group-hover:font-bold">た</p> <p class="text-sm select-none">ta</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('sa')}"  @click="selectLetter('sa', 'さ')"><p class="text-4xl group-hover:font-bold">さ</p> <p class="text-sm select-none">sa</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ka')}"  @click="selectLetter('ka', 'か')"><p class="text-4xl group-hover:font-bold">か</p> <p class="text-sm select-none">ka</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('a')}"  @click="selectLetter('a', 'あ')"><p class="text-4xl group-hover:font-bold">あ</p> <p class="text-sm select-none">a</p></div> </td>
                             <td class="font-bold">-a</td>
                         </tr>
                         <!-- iii  -->
                         <tr>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wi')}"  @click="selectLetter('wi')"><p class="text-4xl group-hover:font-bold">ゐ</p> <p class="text-sm select-none">wi</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ri')}"  @click="selectLetter('ri')"><p class="text-4xl group-hover:font-bold">り</p> <p class="text-sm select-none">ri</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wi')}"  @click="selectLetter('wi','ゐ')"><p class="text-4xl group-hover:font-bold">ゐ</p> <p class="text-sm select-none">wi</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ri')}"  @click="selectLetter('ri','り')"><p class="text-4xl group-hover:font-bold">り</p> <p class="text-sm select-none">ri</p></div> </td>
                             <td> <div class="td group pointer-events-none"><p class="text-4xl group-hover:font-bold"></p> <p class="text-sm select-none"></p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mi')}"  @click="selectLetter('mi')"><p class="text-4xl group-hover:font-bold">み</p> <p class="text-sm select-none">mi</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('hi')}"  @click="selectLetter('hi')"><p class="text-4xl group-hover:font-bold">ひ</p> <p class="text-sm select-none">hi</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ni')}"  @click="selectLetter('ni')"><p class="text-4xl group-hover:font-bold">に</p> <p class="text-sm select-none">ni</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('chi')}"  @click="selectLetter('chi')"><p class="text-4xl group-hover:font-bold">ち</p> <p class="text-sm select-none">chi</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('shi')}"  @click="selectLetter('shi')"><p class="text-4xl group-hover:font-bold">し</p> <p class="text-sm select-none">shi</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ki')}"  @click="selectLetter('ki')"><p class="text-4xl group-hover:font-bold">き</p> <p class="text-sm select-none">ki</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('i')}"  @click="selectLetter('i')"><p class="text-4xl group-hover:font-bold">い</p> <p class="text-sm select-none">i</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mi')}"  @click="selectLetter('mi','み')"><p class="text-4xl group-hover:font-bold">み</p> <p class="text-sm select-none">mi</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('hi')}"  @click="selectLetter('hi','ひ')"><p class="text-4xl group-hover:font-bold">ひ</p> <p class="text-sm select-none">hi</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ni')}"  @click="selectLetter('ni','に')"><p class="text-4xl group-hover:font-bold">に</p> <p class="text-sm select-none">ni</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('chi')}"  @click="selectLetter('chi','ち')"><p class="text-4xl group-hover:font-bold">ち</p> <p class="text-sm select-none">chi</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('shi')}"  @click="selectLetter('shi','し')"><p class="text-4xl group-hover:font-bold">し</p> <p class="text-sm select-none">shi</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ki')}"  @click="selectLetter('ki','き')"><p class="text-4xl group-hover:font-bold">き</p> <p class="text-sm select-none">ki</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('i')}"  @click="selectLetter('i','い')"><p class="text-4xl group-hover:font-bold">い</p> <p class="text-sm select-none">i</p></div> </td>
                             <td class="font-bold">-i</td>
                         </tr>
                         <!-- uuu  -->
                         <tr>
                             <td> <div class="td group pointer-events-none"><p class="text-4xl group-hover:font-bold"></p> <p class="text-sm select-none"></p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ru')}"  @click="selectLetter('ru')"><p class="text-4xl group-hover:font-bold">る</p> <p class="text-sm select-none">ru</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('yu')}"  @click="selectLetter('yu')"><p class="text-4xl group-hover:font-bold">ゆ</p> <p class="text-sm select-none">yu</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mu')}"  @click="selectLetter('mu')"><p class="text-4xl group-hover:font-bold">む</p> <p class="text-sm select-none">mu</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('fu')}"  @click="selectLetter('fu')"><p class="text-4xl group-hover:font-bold">ふ</p> <p class="text-sm select-none">fu</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('nu')}"  @click="selectLetter('nu')"><p class="text-4xl group-hover:font-bold">ぬ</p> <p class="text-sm select-none">nu</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('tsu')}"  @click="selectLetter('tsu')"><p class="text-4xl group-hover:font-bold">つ</p> <p class="text-sm select-none">tsu</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('su')}"  @click="selectLetter('su')"><p class="text-4xl group-hover:font-bold">す</p> <p class="text-sm select-none">su</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ku')}"  @click="selectLetter('ku')"><p class="text-4xl group-hover:font-bold">く</p> <p class="text-sm select-none">ku</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('u')}"  @click="selectLetter('u')"><p class="text-4xl group-hover:font-bold">う</p> <p class="text-sm select-none">u</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ru')}"  @click="selectLetter('ru','る')"><p class="text-4xl group-hover:font-bold">る</p> <p class="text-sm select-none">ru</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('yu')}"  @click="selectLetter('yu','ゆ')"><p class="text-4xl group-hover:font-bold">ゆ</p> <p class="text-sm select-none">yu</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mu')}"  @click="selectLetter('mu','む')"><p class="text-4xl group-hover:font-bold">む</p> <p class="text-sm select-none">mu</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('fu')}"  @click="selectLetter('fu','ふ')"><p class="text-4xl group-hover:font-bold">ふ</p> <p class="text-sm select-none">fu</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('nu')}"  @click="selectLetter('nu','ぬ')"><p class="text-4xl group-hover:font-bold">ぬ</p> <p class="text-sm select-none">nu</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('tsu')}"  @click="selectLetter('tsu','つ')"><p class="text-4xl group-hover:font-bold">つ</p> <p class="text-sm select-none">tsu</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('su')}"  @click="selectLetter('su','す')"><p class="text-4xl group-hover:font-bold">す</p> <p class="text-sm select-none">su</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ku')}"  @click="selectLetter('ku','く')"><p class="text-4xl group-hover:font-bold">く</p> <p class="text-sm select-none">ku</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('u')}"  @click="selectLetter('u','う')"><p class="text-4xl group-hover:font-bold">う</p> <p class="text-sm select-none">u</p></div> </td>
                             <td class="font-bold">-u</td>
                         </tr>
                         <!-- eee  -->
                         <tr>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('we')}"  @click="selectLetter('we')"><p class="text-4xl group-hover:font-bold">ゑ</p> <p class="text-sm select-none">we</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('re')}"  @click="selectLetter('re')"><p class="text-4xl group-hover:font-bold">れ</p> <p class="text-sm select-none">re</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('we')}"  @click="selectLetter('we','ゑ')"><p class="text-4xl group-hover:font-bold">ゑ</p> <p class="text-sm select-none">we</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('re')}"  @click="selectLetter('re','れ')"><p class="text-4xl group-hover:font-bold">れ</p> <p class="text-sm select-none">re</p></div> </td>
                             <td> <div class="td group pointer-events-none"><p class="text-4xl group-hover:font-bold"></p> <p class="text-sm select-none"></p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('me')}"  @click="selectLetter('me')"><p class="text-4xl group-hover:font-bold">め</p> <p class="text-sm select-none">me</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('he')}"  @click="selectLetter('he')"><p class="text-4xl group-hover:font-bold">へ</p> <p class="text-sm select-none">he</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ne')}"  @click="selectLetter('ne')"><p class="text-4xl group-hover:font-bold">ね</p> <p class="text-sm select-none">ne</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('te')}"  @click="selectLetter('te')"><p class="text-4xl group-hover:font-bold">て</p> <p class="text-sm select-none">te</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('se')}"  @click="selectLetter('se')"><p class="text-4xl group-hover:font-bold">せ</p> <p class="text-sm select-none">se</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ke')}"  @click="selectLetter('ke')"><p class="text-4xl group-hover:font-bold">け</p> <p class="text-sm select-none">ke</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('e')}"  @click="selectLetter('e')"><p class="text-4xl group-hover:font-bold">え</p> <p class="text-sm select-none">e</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('me')}"  @click="selectLetter('me','め')"><p class="text-4xl group-hover:font-bold">め</p> <p class="text-sm select-none">me</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('he')}"  @click="selectLetter('he','へ')"><p class="text-4xl group-hover:font-bold">へ</p> <p class="text-sm select-none">he</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ne')}"  @click="selectLetter('ne','ね')"><p class="text-4xl group-hover:font-bold">ね</p> <p class="text-sm select-none">ne</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('te')}"  @click="selectLetter('te','て')"><p class="text-4xl group-hover:font-bold">て</p> <p class="text-sm select-none">te</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('se')}"  @click="selectLetter('se','せ')"><p class="text-4xl group-hover:font-bold">せ</p> <p class="text-sm select-none">se</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ke')}"  @click="selectLetter('ke','け')"><p class="text-4xl group-hover:font-bold">け</p> <p class="text-sm select-none">ke</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('e')}"  @click="selectLetter('e','え')"><p class="text-4xl group-hover:font-bold">え</p> <p class="text-sm select-none">e</p></div> </td>
                             <td class="font-bold">-e</td>
                         </tr>
                         <!-- ooo  -->
                         <tr>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wo')}"  @click="selectLetter('wo')"><p class="text-4xl group-hover:font-bold">を</p> <p class="text-sm select-none">wo</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ro')}"  @click="selectLetter('ro')"><p class="text-4xl group-hover:font-bold">ろ</p> <p class="text-sm select-none">ro</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('yo')}"  @click="selectLetter('yo')"><p class="text-4xl group-hover:font-bold">よ</p> <p class="text-sm select-none">yo</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mo')}"  @click="selectLetter('mo')"><p class="text-4xl group-hover:font-bold">も</p> <p class="text-sm select-none">mo</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ho')}"  @click="selectLetter('ho')"><p class="text-4xl group-hover:font-bold">ほ</p> <p class="text-sm select-none">ho</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('no')}"  @click="selectLetter('no')"><p class="text-4xl group-hover:font-bold">の</p> <p class="text-sm select-none">no</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('to')}"  @click="selectLetter('to')"><p class="text-4xl group-hover:font-bold">と</p> <p class="text-sm select-none">to</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('so')}"  @click="selectLetter('so')"><p class="text-4xl group-hover:font-bold">そ</p> <p class="text-sm select-none">so</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ko')}"  @click="selectLetter('ko')"><p class="text-4xl group-hover:font-bold">こ</p> <p class="text-sm select-none">ko</p></div> </td>
-                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('o')}"  @click="selectLetter('o')"><p class="text-4xl group-hover:font-bold">お</p> <p class="text-sm select-none">o</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('wo')}"  @click="selectLetter('wo','を')"><p class="text-4xl group-hover:font-bold">を</p> <p class="text-sm select-none">wo</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ro')}"  @click="selectLetter('ro','ろ')"><p class="text-4xl group-hover:font-bold">ろ</p> <p class="text-sm select-none">ro</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('yo')}"  @click="selectLetter('yo','よ')"><p class="text-4xl group-hover:font-bold">よ</p> <p class="text-sm select-none">yo</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('mo')}"  @click="selectLetter('mo','も')"><p class="text-4xl group-hover:font-bold">も</p> <p class="text-sm select-none">mo</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ho')}"  @click="selectLetter('ho','ほ')"><p class="text-4xl group-hover:font-bold">ほ</p> <p class="text-sm select-none">ho</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('no')}"  @click="selectLetter('no','の')"><p class="text-4xl group-hover:font-bold">の</p> <p class="text-sm select-none">no</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('to')}"  @click="selectLetter('to','と')"><p class="text-4xl group-hover:font-bold">と</p> <p class="text-sm select-none">to</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('so')}"  @click="selectLetter('so','そ')"><p class="text-4xl group-hover:font-bold">そ</p> <p class="text-sm select-none">so</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('ko')}"  @click="selectLetter('ko','こ')"><p class="text-4xl group-hover:font-bold">こ</p> <p class="text-sm select-none">ko</p></div> </td>
+                            <td> <div class="td group" :class="{'!font-bold !bg-[#390097] !text-[#00F171]':checkSelected('o')}"  @click="selectLetter('o','お')"><p class="text-4xl group-hover:font-bold">お</p> <p class="text-sm select-none">o</p></div> </td>
                             <td class="font-bold">-o</td>
                         </tr>
 
@@ -116,11 +116,12 @@ const props=defineProps({
 
 const allSelected = ref(false)
 
+// select all letters
 const selectAllCell = ()=>{
  allSelected.value= true
-
-    props.selectAll()
+ props.selectAll()
 }
+// unselect all letters
 const selectAllClear = ()=>{
  allSelected.value= false
  props.selectClear()
