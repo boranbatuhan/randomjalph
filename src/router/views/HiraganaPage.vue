@@ -7,7 +7,6 @@
             </div>
             <!-- section -->
 
-            
             <div class="w-full h-full flex items-center justify-center flex-col flex-wrap gap-10 pb-16">
                 <!-- hiragana table -->
                 <HiraganaTable :checkSelected="checkSelected" :selectLetter="selectLetter" :selectAll="selectAll" :selectClear="selectClear" :isOpen="isOpen" ></HiraganaTable>
@@ -16,12 +15,17 @@
                         <p class="text-2xl text-white font-bold ">set {{ selected.length }} letters</p>
                 </button>
                 <!-- shuffleresult -->
-                <div v-if="isSet" class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col py-8 bg-[#390097]">
+                <div v-if="isSet" class="flex items-center justify-center gap-10">
+                    <div  class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col py-8 bg-[#390097]">
                     <div id="resultContainer" class="border w-40 h-24  flex items-center justify-center neou bg-[#390097] ">
                         <p class="text-4xl text-white font-bold ">{{ result }}</p>
                     </div>
                     <button id="shuffleBtn" @click="shuffleLetter" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border text-white font-semibold px-3 py-1.5 rounded-lg mt-auto neou-btn " >Shuffle</button>
                 </div>
+                <DrawingArea ref="drawingAreaRef"/>
+                </div>
+
+
 
         </div>
         </div>
@@ -33,10 +37,15 @@ import router from '/src/router';
 import { ref } from 'vue';
 
 import HiraganaTable from '/src/components/HiraganaTable.vue';
+import DrawingArea from '/src/components/DrawingArea.vue';
 const selected = ref([])
 const result = ref("")
 const isSet = ref(false)
 const isOpen = ref(true)
+
+const drawingAreaRef=ref(null)
+
+
 const goHome=()=>{
     router.push("/")
 }
@@ -63,6 +72,9 @@ return selected.value.includes(name)
 }
 
 const shuffleLetter = ()=>{
+
+    drawingAreaRef.value.clearCanvas()
+
     const container = document.querySelector("#resultContainer")
     const shuffleBtn = document.querySelector("#shuffleBtn")
     container.classList.add("flip-horizontal-bottom")

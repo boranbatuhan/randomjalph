@@ -1,4 +1,5 @@
 <template>
+  
   <div class="container mx-auto ">
     <router-view v-if="showRouter"></router-view>
   </div>
