@@ -9,24 +9,30 @@
 
             <div class="w-full h-full flex items-center justify-center flex-col flex-wrap gap-10 pb-16">
                 <!-- hiragana table -->
-                
-                <HiraganaTable :checkSelected="checkSelected" :selectLetter="selectLetter" :selectAll="selectAll" :selectClear="selectClear" :isOpen="isOpen" ></HiraganaTable>
 
+                <HiraganaTable :checkSelected="checkSelected" :selectLetter="selectLetter" :selectAll="selectAll" :selectClear="selectClear" :isOpen="isOpen" ></HiraganaTable>
                 <!-- set letters button  -->
                 <button v-if="!isSet" @click="setLetters" :class="{'pointer-events-none':selected.length<=0}" class="border px-3 py-1.5  flex items-center justify-center neou bg-[#390097] hover:bg-[#7017ff] transition-all hover:-mt-2  ">
-                        <p class="text-2xl text-white font-bold ">set {{ selected.length }} letters</p>
+                        <p class="text-2xl text-white font-bold flex items-center justify-center gap-2">
+                            set {{ selected.length }} letters
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024"><path fill="currentColor" d="M77.248 415.04a64 64 0 0 1 90.496 0l226.304 226.304L846.528 188.8a64 64 0 1 1 90.56 90.496l-543.04 543.04l-316.8-316.8a64 64 0 0 1 0-90.496z"/></svg>
+                        </p>
                 </button>
                 <!-- shuffleresult -->
                 <div v-if="isSet" class="flex items-center justify-center gap-10">
-                    <div  class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col py-8 bg-[#390097]">
-                    <div id="resultContainer" class="border w-40 h-24 cursor-pointer group relative  flex items-center justify-center neou bg-[#390097] ">
-                        <p class="text-4xl text-white font-bold ">{{ result }}</p>
-                        <p class="text-4xl text-white font-bold mt-7  invisible group-hover:visible transition-all neou absolute -bottom-12 bg-[#390097] px-4 py-2 ">{{ resultHiragana }}</p>
-                    </div>
-                    <button id="shuffleBtn" @click="shuffleLetter" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border text-white font-semibold px-3 py-1.5 rounded-lg mt-auto neou-btn " >Shuffle</button>
+                    <!-- shuffle card -->
+                    <div  class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col pt-12 bg-[#390097]">
+                        <div id="resultContainer" class="border w-40 h-24 cursor-pointer group relative  flex items-center justify-center neou bg-[#390097] ">
+                            <p class="text-4xl text-white font-bold ">{{ result }}</p>
+                            <p class="text-4xl text-white font-bold mt-7  invisible group-hover:visible transition-all neou absolute -bottom-12 bg-[#390097] px-4 py-2 ">{{ resultHiragana }}</p>
+                        </div>
+                        <button id="shuffleBtn" @click="shuffleLetter" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border text-white font-semibold px-3 py-1.5 rounded-lg mt-auto mb-4 neou-btn flex items-center justify-center gap-2 " >
+                            Shuffle
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10.59 9.17L5.41 4L4 5.41l5.17 5.17l1.42-1.41zM14.5 4l2.04 2.04L4 18.59L5.41 20L17.96 7.46L20 9.5V4h-5.5zm.33 9.41l-1.41 1.41l3.13 3.13L14.5 20H20v-5.5l-2.04 2.04l-3.13-3.13z"/></svg>
+                        </button>
                     </div>
                     <!-- drawning area -->
-                    <DrawingArea ref="drawingAreaRef" :resultHiragana="resultHiragana"/>
+                    <DrawingArea ref="drawingAreaRef" :resultHiragana="resultHiragana" :shuffleLetter="shuffleLetter"/>
                 </div>
 
 
@@ -104,10 +110,10 @@ const shuffleLetter = ()=>{
     const container = document.querySelector("#resultContainer")
     const shuffleBtn = document.querySelector("#shuffleBtn")
     //result flip animation
-    container.classList.add("flip-horizontal-bottom")
+    container.classList.add("flipping")
     shuffleBtn.classList.add("!pointer-events-none")
     setTimeout(() => {
-        container.classList.remove("flip-horizontal-bottom")
+        container.classList.remove("flipping")
         shuffleBtn.classList.remove("!pointer-events-none")
     }, 500);
     //random letter
@@ -136,24 +142,11 @@ const selectClear=()=>{
 
 
 <style  scoped>
-.flip-horizontal-bottom {
-	-webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+.flipping {
+	-webkit-animation: flipping 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: flipping 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 }
-
-/* ----------------------------------------------
- * Generated by Animista on 2023-8-25 13:43:2
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation flip-horizontal-bottom
- * ----------------------------------------
- */
- @-webkit-keyframes flip-horizontal-bottom {
+ @-webkit-keyframes flipping {
   0% {
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
@@ -163,7 +156,7 @@ const selectClear=()=>{
             transform: rotateX(-360deg);
   }
 }
-@keyframes flip-horizontal-bottom {
+@keyframes flipping {
   0% {
     -webkit-transform: rotateX(0);
             transform: rotateX(0);

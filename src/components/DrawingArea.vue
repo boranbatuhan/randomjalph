@@ -7,7 +7,16 @@
         <div class="w-52 h-48 bg-white border border-[#00F171]  neou">
             <canvas id="canvas" class="w-52 h-48"></canvas>
         </div>
-        <button @click="clearCanvas" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border mt-4 text-white font-semibold px-3 py-1.5 rounded-lg  neou-btn " >Clear</button>
+       <div class="flex items-center justify-evenly w-full">
+        <button @click="clearCanvas" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border mt-4 text-white font-semibold px-3 py-1.5 rounded-lg  neou-btn  flex items-center justify-center gap-2" >
+          Clear
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><g fill="none" stroke="currentColor"><path stroke-linejoin="round" stroke-width="4.302" d="M44.782 24.17L31.918 7.1L14.135 20.5L27.5 37l3.356-2.336L44.782 24.17Z"/><path stroke-linejoin="round" stroke-width="4.302" d="m27.5 37l-3.839 3.075l-10.563-.001l-2.6-3.45l-6.433-8.536L14.5 20.225"/><path stroke-linecap="round" stroke-width="4.5" d="M13.206 40.072h31.36"/></g></svg>
+        </button>
+        <button @click="props.shuffleLetter" class="bg-[#390097] border-[#00F171] hover:border-[#390097] hover:bg-[#00F171] border mt-4 text-white font-semibold px-3 py-1.5 rounded-lg  neou-btn  flex items-center justify-center gap-2" >
+          Next
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M2 12h20m-9-9l9 9l-9 9"/></svg>
+        </button>
+       </div>
     </div>
 </template>
 
@@ -21,7 +30,8 @@ defineExpose({
 
 // hiragana for hint
 const props = defineProps({
-  resultHiragana:String
+  resultHiragana:String,
+  shuffleLetter:Function
 })
 
 // clear canvas 
