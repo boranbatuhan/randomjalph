@@ -22,7 +22,7 @@
                 <div v-if="isSet" class="flex items-center justify-center gap-10">
                     <!-- shuffle card -->
                     <div  class="w-64 h-80  border md:mx-0 mx-auto flex items-center flex-col pt-12 bg-[#390097]">
-                        <div id="resultContainer" class="border w-40 h-24 cursor-pointer group relative  flex items-center justify-center neou bg-[#390097] ">
+                        <div id="resultContainer" @click="shuffleLetter" class="border w-40 h-24 cursor-pointer group relative  flex items-center justify-center neou bg-[#390097] ">
                             <p class="text-4xl text-white font-bold ">{{ result }}</p>
                             <p class="text-4xl text-white font-bold mt-7  invisible group-hover:visible transition-all neou absolute -bottom-12 bg-[#390097] px-4 py-2 ">{{ resultHiragana }}</p>
                         </div>
@@ -44,7 +44,7 @@
 
 <script setup>
 import router from '/src/router';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 import HiraganaTable from '/src/components/HiraganaTable.vue';
 import DrawingArea from '/src/components/DrawingArea.vue';
@@ -67,6 +67,13 @@ const goHome=()=>{
 const setLetters=()=>{
     isOpen.value=false
     isSet.value=true
+    document.addEventListener('keydown', function(event) {
+            if (event.key == 'n' && event.repeat === false ) {
+                if(isSet.value){
+                    shuffleLetter()
+                }
+            }
+        });
 }
 
 //select letter unselect
@@ -138,6 +145,7 @@ const selectClear=()=>{
     selected.value=[]
     selectedHiragana.value=[]
 }
+
 </script>
 
 
