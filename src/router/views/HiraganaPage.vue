@@ -68,7 +68,7 @@ const setLetters=()=>{
     isOpen.value=false
     isSet.value=true
     document.addEventListener('keydown', function(event) {
-            if (event.key == 'n' && event.repeat === false ) {
+            if (event.key == 's' && event.repeat === false ) {
                 if(isSet.value){
                     shuffleLetter()
                 }

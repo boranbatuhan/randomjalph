@@ -25,7 +25,7 @@ import { onMounted } from "vue";
 
 //send func to parent
 defineExpose({
-    clearCanvas
+    clearCanvas,
 })
 
 // hiragana for hint
@@ -54,6 +54,15 @@ const nextLetter =()=>{
 }
 
 onMounted(()=>{  
+
+  document.addEventListener('keydown', function(event) {
+            if (event.key == 'n' && event.repeat === false ) {
+                  nextLetter()
+            }
+        });
+
+
+
     const canvas = document.getElementById("canvas");
     const context = canvas.getContext("2d");
     let isDrawing = false;
